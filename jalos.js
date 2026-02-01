@@ -4,9 +4,12 @@
 // Copyright (c) 2025-2026 JOPLAYXYZDEV
 // Licensed under the MIT License
 
-export function showLoader(MIN_TIME, LOADER_HTML) {
+export function showLoader(MIN_TIME = 1500, LOADER_HTML) {
     // Prevent double injection
-    if (document.getElementById("loader-overlay")) return;
+    if (document.getElementById("loader-overlay")) {
+        console.warn("[JALOS.JS] Double injection blocked")
+        return;
+    };
 
     const overlay = document.createElement("div");
     overlay.id = "loader-overlay";
