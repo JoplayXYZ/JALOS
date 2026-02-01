@@ -39,7 +39,7 @@ export function showLoader(MIN_TIME, IMG_SRC) {
 }
 
 /* Basic useage (type="module" required)
-    import { shopLoader } from 'script path';
+    import { showLoader } from 'https://cdn.jsdelivr.net/gh/joplayxyz/jalos@latest/jalos.js';
 
     showLoader(2000, "/images/logo.png")
 */
