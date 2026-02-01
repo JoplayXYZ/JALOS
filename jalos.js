@@ -4,17 +4,18 @@
 // Copyright (c) 2025-2026 JOPLAYXYZDEV
 // Licensed under the MIT License
 
-export function showLoader(MIN_TIME, IMG_SRC) {
+export function showLoader(MIN_TIME, LOADER_HTML) {
     // Prevent double injection
     if (document.getElementById("loader-overlay")) return;
 
     const overlay = document.createElement("div");
     overlay.id = "loader-overlay";
 
-    overlay.innerHTML = `
-    <img src="${IMG_SRC}"><br><br>
-    <l-zoomies size="100" stroke="5" bg-opacity="0.1" speed="1.4" color="white" ></l-zoomies>
-    `;
+    if (LOADER_HTML) {
+        overlay.innerHTML = LOADER_HTML;
+    } else {
+        overlay.innerHTML = `<p>please specify the LOADER_HTML variable</p><br><p>JALOS.JS - https://github.com/JoplayXYZ/Jalos</p>`;
+    }
 
     document.body.classList.add("loaderplaying");
     document.body.appendChild(overlay);
