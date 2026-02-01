@@ -5,7 +5,7 @@ JustAnotherLoaderOverlayScript (JALOS) - A Clean, Customizeable and Open Source 
 ```js
     import { showLoader } from 'https://cdn.jsdelivr.net/gh/joplayxyz/jalos@latest/jalos.js';
 
-    showLoader(2000, "/images/logo.png")
+    showLoader(2000, '<img src="/images/logo.png"><br>')
 ```
 
 ## Basic CSS template:
