@@ -15,6 +15,7 @@ export function showLoader(MIN_TIME, LOADER_HTML) {
         overlay.innerHTML = LOADER_HTML;
     } else {
         overlay.innerHTML = `<p>please specify the LOADER_HTML variable</p><br><p>JALOS.JS - https://github.com/JoplayXYZ/Jalos</p>`;
+        console.warn("[JALOS.JS] please specify the LOADER_HTML variable");
     }
 
     document.body.classList.add("loaderplaying");
